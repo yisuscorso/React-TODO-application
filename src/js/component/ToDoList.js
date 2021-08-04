@@ -6,10 +6,10 @@ export const ToDoList = () => {
 	const listaItems = taskList.map((item, index) => {
 		return (
 			<div key={index}>
-				<li className="Example list-group-item d-flex justify-content-between">
+				<li className="Lista">
 					{item}
 					<i
-						className="fas fa-times"
+						className="Lista2"
 						onClick={() => {
 							let holder = taskList.filter(
 								(task, i) => i != index
@@ -28,7 +28,7 @@ export const ToDoList = () => {
 				value={inputValue}
 			/>
 			<button onClick={e => setTaskList([...taskList, inputValue])}>
-				Add
+				Añadir
 			</button>
 			<ul className="list-group">{listaItems}</ul>
 		</div>
